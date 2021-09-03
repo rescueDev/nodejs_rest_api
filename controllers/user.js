@@ -39,7 +39,7 @@ exports.generateUsers = async (req, res, next) => {
           _id: new mongoose.Types.ObjectId(),
           brand: faker.vehicle.manufacturer(),
           model: faker.vehicle.model(),
-          year: Math.floor(Math.random() * 2021) + 1992,
+          year: Math.floor(Math.random() * (2021 - 1992 + 1) + 1992),
           specs: {
             power: Math.floor(Math.random() * 180) + 70,
             fuel: faker.vehicle.fuel(),
